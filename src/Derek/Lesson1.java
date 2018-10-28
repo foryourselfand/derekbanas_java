@@ -1,11 +1,11 @@
 package Derek;
 
-// Here I'm defining a new class (Blueprint) named HelloWorld
+// Here I'm defining a new class (Blueprint) named Lesson1
 // public tells Java that this should be available to all other classes
 // classes are blue prints used to design objects that contain attributes (variables) and methods (functions)
-// HelloWorld is just what you named your program. That allows you to reference it later
-// { is the opening brace that surrounds the code used by HelloWorld
-public class HelloWorld
+// Lesson1 is just what you named your program. That allows you to reference it later
+// { is the opening brace that surrounds the code used by Lesson1
+public class Lesson1
 {
     // public allows other classes to use this function
     // static means that only a class can call for this function to execute

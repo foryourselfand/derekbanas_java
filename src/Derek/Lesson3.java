@@ -5,7 +5,7 @@ package Derek;
 
 import java.util.Scanner;
 
-public class LessonTwo {
+public class Lesson3 {
     /* static means that only a class can call for this function to execute
      * Creates a new scanner object named userInput
      * You create the Scanner object by calling new and passing the Scanner constructor
