@@ -160,10 +160,6 @@ public class Lesson6 {
         }
 
         // You can catch numerous exceptions (List most specific first
-        catch (IOException e) // Catches any IO Exception
-        {
-            System.out.println("An unknown IO Error Occured");
-        }
 
         /* To ignore an exception do this
          * catch (ClassNotFoundException e)

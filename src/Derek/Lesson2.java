@@ -31,7 +31,7 @@ public class Lesson2 {
             System.out.println("The random number is equal to 25");
         }
 
-        // Checks if randomNumber is not equal to 25
+        // Checks if randomNumber is not equal to 15
         else if (randomNumber != 15) {
             System.out.println("The random number is not equal to 15");
         }

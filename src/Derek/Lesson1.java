@@ -5,22 +5,19 @@ package Derek;
 // classes are blue prints used to design objects that contain attributes (variables) and methods (functions)
 // Lesson1 is just what you named your program. That allows you to reference it later
 // { is the opening brace that surrounds the code used by Lesson1
-public class Lesson1
-{
+public class Lesson1 {
     // public allows other classes to use this function
     // static means that only a class can call for this function to execute
     // void states that this function doesn't return any values after it is done executing
     // main is required in every Java program. This function is always executed first
     // Every main function must accept an array of string objects
 
+    // Constant variables are defined with the word final
+    static final double PINUM = 3.1415929;
     // Class variables must start with static if you want to access them with any other methods in the class
     static String randomString = "String to print";
 
-    // Constant variables are defined with the word final
-    static final double PINUM = 3.1415929;
-
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         // System.out is an object that outputs information
         // println is a function that prints to the screen what ever you provide between braces
         // "Hello World" is a string of characters. Strings must be surrounded with quotes
