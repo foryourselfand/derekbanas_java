@@ -1,0 +1,11 @@
+1  - Basic, Types
+2  - User Input, Scanner, Primitive Operations, Math
+3  - Relational Operators, Logical Operators, Conditional Statement, If, Switch
+4  - Looping, For, While
+5  - Methods, Fields
+6  - Exceptions, Try, Catch, Finally
+7  - OOP
+8  - game (not logic programming)
+9  - Arrays
+10 - game (not logic programming)
+11 - ArrayList, Iterator

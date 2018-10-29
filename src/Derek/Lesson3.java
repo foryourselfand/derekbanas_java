@@ -1,104 +1,127 @@
 package Derek;
 
-// To import an external class you use import
-// You can import whole libraries of classes like this import java.util.*;
-
-import java.util.Scanner;
-
 public class Lesson3 {
-    /* static means that only a class can call for this function to execute
-     * Creates a new scanner object named userInput
-     * You create the Scanner object by calling new and passing the Scanner constructor
-     * the input stream to look at (System.in = keyboard input)
-     */
-    static Scanner userInput = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.print("Your favorite number: "); // Same as println without a newline
+        // Creates a random number between 0 and 50
+        int randomNumber = (int) (Math.random() * 50);
 
-        /* The if statement will only execute the code that lies between {} if the value inside () is true
-         * userInput.hasNextDouble() returns true if the next value entered is a Double
-         * There are similar methods for the other data types
-         * hasNextInt() : Integer input
-         * hasNextFloat() : Float input
-         * There are others for Boolean, Byte, Long, and Short
+        /* Relational Operators:
+         * Java has 6 relational operators
+         * > : Greater Than
+         * < : Less Than
+         * == : Equal To
+         * != : Not Equal To
+         * >= : Greater Than Or Equal To
+         * <= : Less Than Or Equal To
          */
 
-        if (userInput.hasNextInt()) {
+        // If randomNumber is less than 25, execute the code between {} and then stop checking
+        if (randomNumber < 25) {
+            System.out.println("The random number is less than 25");
+        }
 
-            int numberEntered = userInput.nextInt();
-            /* userInput.nextDouble() receives user input and stores it in the variable numberEntered
-             * You have to use a different method based on the type of input
-             * nextInt() : Works for Integers
-             * nextDouble() : Works for Doubles
-             * nextFloat() : Works for Floats
-             * nextLine() : Works for Strings
-             * There are others for Boolean, Byte, Long, and Short
-             * If the user enters a value of the wrong type the program crashes
-             */
+        // If randomNumber wasn't less than 25, then check if it's greater than it. If so, execute the code between {} and then stop checking
+        else if (randomNumber > 25) {
+            System.out.println("The random number is greater than 25");
+        }
 
-            System.out.println("You entered " + numberEntered);
+        // Checks if randomNumber equals 25
+        else if (randomNumber == 25) {
+            System.out.println("The random number is equal to 25");
+        }
 
-            // Here I perform basic mathematics calculations
-            int numEnteredTimes2 = numberEntered + numberEntered;
-            System.out.println(numberEntered + " + " + numberEntered + " = " + numEnteredTimes2);
+        // Checks if randomNumber is not equal to 15
+        else if (randomNumber != 15) {
+            System.out.println("The random number is not equal to 15");
+        }
 
-            int numEnteredMinus2 = numberEntered - 2;
-            System.out.println(numberEntered + " - 2 " + " = " + numEnteredMinus2);
+        // Checks if randomNumber is less than or equal to 25
+        else if (randomNumber <= 25) {
+            System.out.println("The random number is less than or equal to 25");
+        }
 
-            int numEnteredTimesSelf = numberEntered * numberEntered;
-            System.out.println(numberEntered + " * " + numberEntered + " = " + numEnteredTimesSelf);
+        // Checks if randomNumber is greater than or equal to 25
+        else if (randomNumber >= 25) {
+            System.out.println("The random number is greater than or equal to 25");
+        }
 
-            // Without the cast the value wouldn't consider fractions
-            double numEnteredDivide2 = (double) numberEntered / 2;
-            System.out.println(numberEntered + " / 2 " + " = " + numEnteredDivide2);
+        // If none of the above were correct print out the random number
+        else {
+            System.out.println("The random number is " + randomNumber);
+        }
 
-            // % Modulus returns the remainder of a division
-            int numEnteredRemainder = numberEntered % 2;
-            System.out.println(numberEntered + " % 2 " + " = " + numEnteredRemainder);
+        // Prints out the random number
+        System.out.println("The random number is " + randomNumber);
 
-            // Shorthand way to add to 2 to a variable and assign the result to self
-            numberEntered += 2; // *= 	/=	%=  Also work
-            numberEntered -= 2;
+        /* Logical Operators:
+         * Java has 6 logical operators
+         * ! : Converts the boolean value to its right to its opposite form ie. true to false
+         * & : Returns true if boolean value on the right and left are both true (Always evaluates both boolean values)
+         * && : Returns true if boolean value on the right and left are both true (Stops evaluating after first false)
+         * | : Returns true if either boolean value on the right or left are true (Always evaluates both boolean values)
+         * || : Returns true if either boolean value on the right or left are true (Stops evaluating after first true)
+         * ^ : Returns true if there is 1 true and 1 false boolean value on the right or left
+         */
 
-            // Shorthand way to add 1 to a variable
-            numberEntered++;
-
-            // Shorthand way to subtract 1 from a variable
-            numberEntered--;
-
-            int numEnteredABS = Math.abs(numberEntered); // Returns the absolute value
-
-            // Returns the larger of the two arguments (They must be of the same type)
-            int whichIsBigger = Math.max(5, 7);
-
-            // Returns the smaller of the two arguments (They must be of the same type)
-            int whichIsSmaller = Math.min(5, 7);
-
-            // Returns the square root argument
-            double numSqrt = Math.sqrt(5.23);
-
-            // Rounds the number provided up
-            int numCeiling = (int) Math.ceil(5.23);
-            System.out.println("Ceiling: " + numCeiling);
-
-            // Rounds the number provided down
-            int numFloor = (int) Math.floor(5.23);
-            System.out.println("Floor: " + numFloor);
-
-            // Rounds the number based on the fraction
-            int numRound = (int) Math.round(5.23);
-            System.out.println("Rounded: " + numRound);
-
-            // Generates random numbers between 0 to 9
-            int randomNumber = (int) (Math.random() * 10);
-            System.out.println("A random number " + randomNumber);
-
-            // If the above condition is false, the code following else is executed
-        } else {
-            System.out.println("Sorry you must enter an integer");
+        if (!(false)) {
+            System.out.println("I turned false into true");
         }
 
 
+        if ((false) && (true)) {
+            System.out.println("\nBoth are true");
+        }
+
+        // There is also a & logical operator it checks the second boolean result even if the first comes back false
+
+        if ((true) || (true)) {
+            System.out.println("\nAt least 1 are true");
+        }
+
+        // There is also a | logical operator it checks the second boolean result even if the first comes back true
+
+        if ((true) ^ (false)) {
+            System.out.println("\n1 is true and the other false");
+        }
+
+        int valueOne = 1;
+        int valueTwo = 2;
+
+        // The Conditional or Ternary Operator assigns one or another value based on a condition
+        // If true valueOne is assigned to biggestValue. If not valueTwo is assigned
+        int biggestValue = (valueOne > valueTwo) ? valueOne : valueTwo;
+
+        System.out.println(biggestValue + " is the biggest\n");
+
+        char theGrade = 'B';
+
+        /* When you have a limited number of possible values a switch statement makes sense
+         * The switch statement checks the value of theGrade to the values that follow case
+         * If it matches it executes the code between {} and then break ends the switch statement
+         * default code is executed if there are no matches
+         * You are not required to use the break or default statements
+         * The expression must be an int, short, byte, or char
+         */
+        switch (theGrade) {
+            case 'A':
+                System.out.println("Great Job");
+                break; // Ends the switch statement
+            case 'b': // You can use multiple case statements in a row
+            case 'B':
+                System.out.println("Good Job, get an A next time");
+                break;
+            case 'C':
+                System.out.println("OK, but you can do better");
+                break;
+            case 'D':
+                System.out.println("You must work harder");
+                break;
+            default:
+                System.out.println("You failed");
+                break;
+        }
+
     }
+
 }
