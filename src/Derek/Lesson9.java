@@ -65,7 +65,7 @@ public class Lesson9 {
         System.out.println();
 
         // Multidimensional Array
-        // To but arrays in an array just add another []
+        // To put arrays in an array just add another []
 
         String[][] multiDArray = new String[10][10];
 
