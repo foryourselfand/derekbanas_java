@@ -15,4 +15,5 @@
 15 - Interfaces, abstract classes, abstract methods
 16 - Object, default Methods, clone
 17 - Threads
-18 - synchronized, Thread pools, scheduleAtFixedRate
+18 - Thread pools, synchronized, scheduleAtFixedRate
+19 - Regex
