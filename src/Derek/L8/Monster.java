@@ -1,4 +1,4 @@
-package Derek;
+package Derek.L8;
 
 import java.util.Arrays;
 
@@ -8,7 +8,7 @@ import java.util.Arrays;
 // A file can't contain two public classes. It can contain classes that are not public
 // If you place class files in the same folder the java compiler will be able to find them
 
-public class Lesson8Monster {
+public class Monster {
 
     public static int numOfMonsters = 0;
     static char[][] battleBoard = new char[10][10];
@@ -27,7 +27,7 @@ public class Lesson8Monster {
     private int attack = 20;
     private int movement = 2;
     private boolean alive = true;
-    public Lesson8Monster(int health, int attack, int movement, String name) {
+    public Monster(int health, int attack, int movement, String name) {
         this.health = health;
         this.attack = attack;
         this.movement = movement;
@@ -61,7 +61,7 @@ public class Lesson8Monster {
         numOfMonsters++;
 
     }
-    public Lesson8Monster() {
+    public Monster() {
         numOfMonsters++;
     }
 

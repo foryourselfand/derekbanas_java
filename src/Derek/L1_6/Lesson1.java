@@ -1,4 +1,4 @@
-package Derek;
+package Derek.L1_6;
 
 // Here I'm defining a new class (Blueprint) named Lesson1
 // public tells Java that this should be available to all other classes

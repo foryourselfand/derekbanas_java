@@ -1,4 +1,4 @@
-package Derek;
+package Derek.L1_6;
 
 public class Lesson3 {
 

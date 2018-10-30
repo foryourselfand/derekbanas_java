@@ -1,4 +1,4 @@
-package Derek;
+package Derek.L1_6;
 /* An exception object is created when an error occurs
  * It tells you what error occurred
  * Here are many of the java exceptions

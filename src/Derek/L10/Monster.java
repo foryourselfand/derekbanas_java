@@ -1,4 +1,4 @@
-package Derek;
+package Derek.L10;
 
 import java.util.Arrays;
 
@@ -8,7 +8,7 @@ import java.util.Arrays;
 // A file can't contain two public classes. It can contain classes that are not public
 // If you place class files in the same folder the java compiler will be able to find them
 
-public class Lesson10Monster {
+public class Monster {
     // Creates a multidimensional array of chars
     static char[][] battleBoard = new char[10][10];
 
@@ -112,7 +112,7 @@ public class Lesson10Monster {
         }
     }
 
-    public void moveMonster(Lesson10Monster[] monster, int arrayItemIndex)
+    public void moveMonster(Monster[] monster, int arrayItemIndex)
     {
         // isSpaceOpen will be used to track whether the space the
         // monster plans to move into is occupied
@@ -215,7 +215,7 @@ public class Lesson10Monster {
 
     // Checks if one monster is trying to move into the same x/y position as
     // another monster
-    public boolean onMySpace(Lesson10Monster[] monster, int indexToChk1, int indexToChk2)
+    public boolean onMySpace(Monster[] monster, int indexToChk1, int indexToChk2)
     {
         // Checks if the 2 monsters have the same x/y position
         if((monster[indexToChk1].xPosition)==(monster[indexToChk2].xPosition)&&(monster[indexToChk1].yPosition)==(monster[indexToChk2].yPosition))
@@ -239,7 +239,7 @@ public class Lesson10Monster {
      * The constructor can't return a value
      */
 
-    public Lesson10Monster(int health, int attack, int movement, String name)
+    public Monster(int health, int attack, int movement, String name)
     {
         this.health = health;
         this.attack = attack;
@@ -288,7 +288,7 @@ public class Lesson10Monster {
     // The following constructor is the one provided by default if you don't create any other constructors
     // Default Constructor
 
-    public Lesson10Monster()
+    public Monster()
     {
         numOfMonsters++; // Adds 1 to the number of monsters on the board
     }

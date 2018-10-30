@@ -1,4 +1,4 @@
-package Derek;
+package Derek.L7;
 
 // Basic class definition
 // public means this class can be used by other classes
@@ -6,7 +6,7 @@ package Derek;
 // A file can't contain two public classes. It can contain classes that are not public
 // If you place class files in the same folder the java compiler will be able to find them
 
-public class Lesson7Monster {
+public class Monster {
 
     // Class Variables or Fields
     // You declare constants with final
@@ -14,7 +14,7 @@ public class Lesson7Monster {
     public final String TOMBSTONE = "Here Lies a Dead monster";
     // public variables are visible outside of the class
     // You should have as few as possible public fields
-    public String name = "Big Lesson7Monster";
+    public String name = "Big Monster";
     // private fields are not visible outside of the class
     private int health = 500;
     private int attack = 20;
@@ -34,7 +34,7 @@ public class Lesson7Monster {
      * The constructor can't return a value
      */
 
-    public Lesson7Monster(int health, int attack, int movement) {
+    public Monster(int health, int attack, int movement) {
         this.health = health;
         this.attack = attack;
         this.movement = movement;
@@ -51,12 +51,12 @@ public class Lesson7Monster {
     // You can overload constructors like any other method
     // The following constructor is the one provided by default if you don't create any other constructors
     // Default Constructor
-    public Lesson7Monster() {
+    public Monster() {
 
     }
 
     //You can use the this keyword to call other constructors
-    public Lesson7Monster(int newHealth) {
+    public Monster(int newHealth) {
         health = newHealth;
     }
 
@@ -65,7 +65,7 @@ public class Lesson7Monster {
     // When overloading a method you can't just change the return type
     // Focus on creating methods that except different parameters
 
-    public Lesson7Monster(int newHealth, int newAttack) {
+    public Monster(int newHealth, int newAttack) {
         this(newHealth); // Any calls to another constructor must occur on the first line
         attack = newAttack;
     }

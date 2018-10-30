@@ -1,4 +1,4 @@
-package Derek;
+package Derek.L7;
 
 public class Lesson7 {
 
@@ -7,7 +7,7 @@ public class Lesson7 {
         // You create an object using the blueprint of this class as follows
         // className objectName = new className();
 
-        Lesson7Monster frank = new Lesson7Monster();
+        Monster frank = new Monster();
 
         // Since the objects name is public you can change it directly
 
