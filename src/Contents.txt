@@ -13,3 +13,4 @@
 13 - String, StringBuilder
 14 - Polymorphism, Inheritance, Protected, Final, InstanceOf
 15 - Interfaces, abstract classes, abstract methods
+16 - Object, default Methods, clone
