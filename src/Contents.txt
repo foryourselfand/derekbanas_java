@@ -25,3 +25,4 @@
 22 - ChangeListener, check boxes, radio buttons, groups, borders, sliders
 23 - JOptionPane, number formats
 24 - JComboBox
+25 - JLists, DefaultListModel, JScrollPane, JList
