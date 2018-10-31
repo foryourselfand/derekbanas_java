@@ -17,3 +17,5 @@
 17 - Threads
 18 - Thread pools, synchronized, scheduleAtFixedRate
 19 - Regex
+20 - GUI, Swing, Components, display frames, panels, labels,
+        buttons, text areas, Dimension, Toolkit
