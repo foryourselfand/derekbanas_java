@@ -5,20 +5,22 @@ package Derek.L18;
 // on a predefined time schedule and much more
 
 // Used to schedule when certain events should be triggered
+
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 
+import static java.util.concurrent.TimeUnit.SECONDS;
+
 // Used to tell Java what unit of time I want to use
-import static java.util.concurrent.TimeUnit.*;
 
 public class Lesson18 {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         addThreadsToPool();
 
     }
 
-    public static void addThreadsToPool(){
+    public static void addThreadsToPool() {
 
         // Allows you to schedule code execution at some time in the future
         // You can also have code execute repetitively based on a time period
@@ -33,11 +35,11 @@ public class Lesson18 {
 
         eventPool.scheduleAtFixedRate(new PerformSystemCheck("Mail"), 5, 5, SECONDS);
 
-        eventPool.scheduleAtFixedRate(new PerformSystemCheck("Calendar"), 10,10, SECONDS);
+        eventPool.scheduleAtFixedRate(new PerformSystemCheck("Calendar"), 10, 10, SECONDS);
 
         // Thread.activeCount returns the number of threads running
 
-        System.out.println("Number of Threads: " +Thread.activeCount());
+        System.out.println("Number of Threads: " + Thread.activeCount());
 
         // Quiz: Why does it say there are 4 threads when we expect 3?
 
@@ -51,14 +53,14 @@ public class Lesson18 {
 
         // Cycle through all the active threads and print out their names
 
-        for(Thread i : listOfThreads){
+        for (Thread i : listOfThreads) {
             System.out.println(i.getName());
         }
 
         // Get priority of all the threads (Priority is equal to the thread
         // that created the new thread. Top priority is 10, lowest priority is 1
 
-        for(Thread i : listOfThreads){
+        for (Thread i : listOfThreads) {
             System.out.println(i.getPriority());
         }
 
@@ -66,11 +68,10 @@ public class Lesson18 {
 
         // This allows the above threads to run for approximately 20 seconds
 
-        try{
+        try {
             Thread.sleep(20000);
+        } catch (InterruptedException e) {
         }
-        catch(InterruptedException e)
-        {}
 
         // Shuts down all threads in the pool
 

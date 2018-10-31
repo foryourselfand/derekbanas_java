@@ -1,8 +1,8 @@
 package Derek.L14;
 
-public class Lesson14{
+public class Lesson14 {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         // I create a Animal object named genericAnimal
 
@@ -28,7 +28,7 @@ public class Lesson14{
 
     }
 
-    public static void acceptAnimal(Animal randAnimal){
+    public static void acceptAnimal(Animal randAnimal) {
 
         // Gets the name and favFood for the Animal passed
         System.out.println(randAnimal.getName());
@@ -58,8 +58,7 @@ public class Lesson14{
         // You can use instanceof to check what type of object
         // you have. This results in a positive for Animal
         // and for Cat
-        if (randAnimal instanceof Cat)
-        {
+        if (randAnimal instanceof Cat) {
             System.out.println(randAnimal.getName() + " is a Cat");
         }
 

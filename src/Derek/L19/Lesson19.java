@@ -55,7 +55,7 @@ public class Lesson19{
         regexChecker("(\\{+)", strangeString);
 
         // Get anything that occurs 3 times except newline
-        // .  Anything but newline
+        // .  Anything but newline´
 
         regexChecker(".{3}", strangeString);
 

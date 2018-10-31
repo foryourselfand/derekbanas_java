@@ -6,38 +6,16 @@ package Derek.L14;
 // This is known as inheritance because Cat inherits all
 // the methods and fields defined in Animal
 
-public class Cat extends Animal{
+public class Cat extends Animal {
 
     // You can add new fields to the subclass
     public String favToy = "Yarn";
 
-    // You can add new methods
-    public void playWith(){
-
-        System.out.println("Yeah " + favToy);
+    public Cat() {
 
     }
 
-    // Here I overrode the Animal walkAround method
-    public void walkAround(){
-
-        // this refers to a specific object created of type Cat
-
-        System.out.println(this.getName() + " stalks around and then sleeps");
-
-    }
-
-    public String getToy(){
-
-        return this.favToy;
-
-    }
-
-    public Cat(){
-
-    }
-
-    public Cat(String name, String favFood, String favToy){
+    public Cat(String name, String favFood, String favToy) {
 
         // super calls the constructor for the super class Animal
 
@@ -47,6 +25,28 @@ public class Cat extends Animal{
         // exist in the Animal class
 
         this.favToy = favToy;
+
+    }
+
+    // You can add new methods
+    public void playWith() {
+
+        System.out.println("Yeah " + favToy);
+
+    }
+
+    // Here I overrode the Animal walkAround method
+    public void walkAround() {
+
+        // this refers to a specific object created of type Cat
+
+        System.out.println(this.getName() + " stalks around and then sleeps");
+
+    }
+
+    public String getToy() {
+
+        return this.favToy;
 
     }
 

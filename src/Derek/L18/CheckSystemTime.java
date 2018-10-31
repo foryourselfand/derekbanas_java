@@ -1,11 +1,12 @@
 package Derek.L18;
 
 import java.text.DateFormat;
-import java.util.*;
+import java.util.Date;
+import java.util.Locale;
 
-public class CheckSystemTime implements Runnable{
+public class CheckSystemTime implements Runnable {
 
-    public void run(){
+    public void run() {
 
         Date rightNow;
         Locale currentLocale;
@@ -13,7 +14,7 @@ public class CheckSystemTime implements Runnable{
         String timeOutput;
 
         rightNow = new Date();
-        currentLocale = new Locale("en");
+        currentLocale = new Locale("ru", "RU");
 
         timeFormatter = DateFormat.getTimeInstance(DateFormat.DEFAULT, currentLocale);
         timeOutput = timeFormatter.format(rightNow);

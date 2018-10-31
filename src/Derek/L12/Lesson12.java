@@ -12,11 +12,11 @@ package Derek.L12;
 // When you change an ArrayList a new array is created by it.
 
 import java.util.Arrays;
-import java.util.LinkedList; // LinkedList Library methods
+import java.util.LinkedList;
 
 public class Lesson12 {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         // Creates a LinkedList object
         LinkedList linkedListOne = new LinkedList();
@@ -51,8 +51,7 @@ public class Lesson12 {
         // first Object that matches what you passed
 
         // You can use the enhanced for to print them out
-        for(String name : names)
-        {
+        for (String name : names) {
             System.out.println(name);
         }
 
@@ -76,7 +75,7 @@ public class Lesson12 {
          * First Index: Noah Peeters
          */
 
-        // Retrieve the first value with getFirst()
+        // Retrieve the last value with getLast()
         System.out.println("\nLast Index: " + names.getLast());
 
         /* OUTPUT
@@ -94,8 +93,7 @@ public class Lesson12 {
          */
 
         // You can check if an object is in the list with contains()
-        if(names.contains("Noah Peeters"))
-        {
+        if (names.contains("Noah Peeters")) {
             System.out.println("\nNoahs Here");
         }
 
@@ -104,8 +102,7 @@ public class Lesson12 {
          */
 
         // You can check if everything in one list is in another
-        if(names.containsAll(nameCopy))
-        {
+        if (names.containsAll(nameCopy)) {
             System.out.println("\nCollections are the same");
         }
 
@@ -149,7 +146,7 @@ public class Lesson12 {
          * Remove first element: Noah Peeters
          */
 
-        // poll() returns the last value and deletes it from the list
+        // pollLast() returns the last value and deletes it from the list
         System.out.println("Remove last element: " + nameCopy.pollLast());
 
         /* OUTPUT

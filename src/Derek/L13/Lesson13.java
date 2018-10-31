@@ -6,14 +6,14 @@ package Derek.L13;
 import java.util.Arrays;
 
 public class Lesson13 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         // You create a String like this
         String randomString = "I'm just a random string";
 
         // If you want to use quotes in a string escape it with \
         // Always surround Strings with quotes " " and not Apostrophes ' '
-        String gotToQuote ="He said, \"I'm here\"";
+        String gotToQuote = "He said, \"I'm here\"";
 
         /* Other common Escape Codes
          * \n : Newline
@@ -49,13 +49,11 @@ public class Lesson13 {
         String uppercaseStr = "BIG";
         String lowercaseStr = "big";
 
-        if(uppercaseStr.equals(lowercaseStr))
-        {
+        if (uppercaseStr.equals(lowercaseStr)) {
             System.out.println("They're equal");
         }
 
-        if(uppercaseStr.equalsIgnoreCase(lowercaseStr))
-        {
+        if (uppercaseStr.equalsIgnoreCase(lowercaseStr)) {
             System.out.println("Same letters");
         }
 
@@ -113,7 +111,7 @@ public class Lesson13 {
 
         // substring() returns a String starting at the first index
         // through the last index provided
-        System.out.println(letters.substring(1,4));
+        System.out.println(letters.substring(1, 4));
 
         // toUpperCase() converts all letters into uppercase
         // toLowerCase() does the opposite

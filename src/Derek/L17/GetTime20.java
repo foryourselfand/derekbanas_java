@@ -6,19 +6,21 @@ package Derek.L17;
 // other code without stopping the time output
 
 // Need this for Date and Locale classes
-import java.util.*;
+
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 // Need this to format the dates
-import java.text.DateFormat;
 
 // By extending the Thread class you can run your code
 // concurrently with other threads
-public class GetTime20 extends Thread{
+public class GetTime20 extends Thread {
 
     // All of the code that the thread executes must be
     // in the run method, or be in a method called for
     // from inside of the run method
-    public void run(){
+    public void run() {
 
         // Creating fields that will contain date info
         Date rightNow;
@@ -29,13 +31,13 @@ public class GetTime20 extends Thread{
         String dateOutput;
 
         // Output the current date and time 20 times
-        for(int i = 1; i <= 20; i++){
+        for (int i = 1; i <= 20; i++) {
 
             // A Date object contains date and time data
             rightNow = new Date();
 
             // Locale defines time formats depending on location
-            currentLocale = new Locale("en", "US");
+            currentLocale = new Locale("ru", "ru");
 
             // DateFormat allows you to define dates / times using predefined
             // styles DEFAULT, SHORT, MEDIUM, LONG, or FULL
@@ -59,9 +61,8 @@ public class GetTime20 extends Thread{
 
             try {
                 Thread.sleep(2000);
+            } catch (InterruptedException e) {
             }
-            catch(InterruptedException e)
-            {}
         }
 
     }
