@@ -1,16 +1,16 @@
-package Derek.L25;
+package Derek.L24;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Lesson25 extends JFrame {
+public class Lesson24 extends JFrame {
 
     JComboBox favoriteShows;
     JButton button1;
     String infoOnComponent = "";
 
-    public Lesson25() {
+    public Lesson24() {
 
         this.setSize(400, 400);
 
@@ -74,7 +74,7 @@ public class Lesson25 extends JFrame {
 
     public static void main(String[] args) {
 
-        new Lesson25();
+        new Lesson24();
 
     }
 
@@ -107,7 +107,7 @@ public class Lesson25 extends JFrame {
 
                 infoOnComponent += "Combo Box Editable: " + favoriteShows.isEditable() + "\n";
 
-                JOptionPane.showMessageDialog(Lesson25.this, infoOnComponent, "Information", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(Lesson24.this, infoOnComponent, "Information", JOptionPane.INFORMATION_MESSAGE);
 
                 infoOnComponent = "";
 
