@@ -28,4 +28,5 @@
 25 - JLists, DefaultListModel, JScrollPane, JList
 26 - JSpinner, Dimension, Date, Calendar
 27 - JTree, dimensions, frames, panels, buttons, scroll bars, listeners
-28 - Layout managers, Flow Layout, Border layout, Box layout.
+28 - Layout managers, Flow Layout, Border layout, Box layout
+29 - GridLayout, GridBagLayout, GridBagConstraints, Font, Insets
