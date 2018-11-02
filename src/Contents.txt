@@ -30,3 +30,4 @@
 27 - JTree, dimensions, frames, panels, buttons, scroll bars, listeners
 28 - Layout managers, Flow Layout, Border layout, Box layout
 29 - GridLayout, GridBagLayout, GridBagConstraints, Font, Insets
+30 - Every Swing component
