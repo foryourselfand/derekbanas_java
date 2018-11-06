@@ -34,3 +34,4 @@
 31 - File
 32 - PrintWriter, BufferedWriter, FileWriter, BufferedReader, FileReader
 33 - Binary Streams, DataOutputStream, FileOutputStream, BufferedOutputStream
+47 - Swing: lines, curves, ellipses, rectangles, strokes, fills, gradients
