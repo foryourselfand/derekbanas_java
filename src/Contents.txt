@@ -35,3 +35,5 @@
 32 - PrintWriter, BufferedWriter, FileWriter, BufferedReader, FileReader
 33 - Binary Streams, DataOutputStream, FileOutputStream, BufferedOutputStream
 47 - Swing: lines, curves, ellipses, rectangles, strokes, fills, gradients
+48 - Paint app: Graphics2D, Box Layout
+49 - Paint app: lines, ellipses, brush strokes, transparency, custom event listener
