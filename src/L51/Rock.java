@@ -1,4 +1,4 @@
-package L50;
+package L51;
 
 import java.awt.Polygon;
 
@@ -22,11 +22,8 @@ class Rock extends Polygon{
 
     // Get the board width and height
 
-//    int width = Lesson51.boardWidth;
-//    int height = Lesson51.boardHeight;
-
-    int width = 200;
-    int height = 200;
+    int width = Lesson51.boardWidth;
+    int height = Lesson51.boardHeight;
 
     // Will hold the x & y coordinates for the Polygons
 
