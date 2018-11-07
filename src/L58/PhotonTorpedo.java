@@ -60,8 +60,8 @@ public class PhotonTorpedo extends Polygon{
         // Sets how quickly the torpedo moves along the path defined
         // by setXVelocity and setYVelocity
 
-        this.setXVelocity(this.torpedoXMoveAngle(movingAngle)*10);
-        this.setYVelocity(this.torpedoYMoveAngle(movingAngle)*10);
+        this.setXVelocity(this.torpedoXMoveAngle(movingAngle)*25);
+        this.setYVelocity(this.torpedoYMoveAngle(movingAngle)*25);
 
     }
 
