@@ -1,7 +1,8 @@
-package L51;
+package L52;
 
 // Layout used by the JPanel
 import L50.Rock;
+import L51.Lesson51;
 
 import java.awt.BorderLayout;
 
@@ -12,6 +13,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 // Will hold all of my Rock objects
 import java.util.ArrayList;
@@ -25,7 +28,7 @@ import java.util.concurrent.TimeUnit;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 
-public class Lesson51 extends JFrame{
+public class GameBoard extends JFrame{
 
     // Height and width of the game board
 
@@ -34,16 +37,44 @@ public class Lesson51 extends JFrame{
 
     public static void main(String [] args)
     {
-        new Lesson51();
+        new GameBoard();
     }
 
-    public Lesson51()
+    public GameBoard()
     {
         // Define the defaults for the JFrame
 
         this.setSize(boardWidth, boardHeight);
         this.setTitle("Java Asteroids");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        addKeyListener(new KeyListener() {
+
+            @Override
+            public void keyTyped(KeyEvent e) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+                if (e.getKeyCode()==87)
+                {
+                    System.out.println("Forward");
+                } else if (e.getKeyCode()==83){
+                    System.out.println("Backward");
+                }
+
+            }
+
+        });
 
         GameDrawingPanel gamePanel = new GameDrawingPanel();
 
@@ -74,9 +105,9 @@ public class Lesson51 extends JFrame{
 
 class RepaintTheBoard implements Runnable{
 
-    Lesson51 theBoard;
+    GameBoard theBoard;
 
-    public RepaintTheBoard(Lesson51 theBoard){
+    public RepaintTheBoard(GameBoard theBoard){
         this.theBoard = theBoard;
     }
 
@@ -99,12 +130,15 @@ class GameDrawingPanel extends JComponent {
 
     // Holds every Rock I create
 
-    public ArrayList<Rock> rocks = new ArrayList<Rock>();
+    public static ArrayList<Rock> rocks = new ArrayList<Rock>();
 
     // Get the original x & y points for the polygon
 
     int[] polyXArray = Rock.sPolyXArray;
     int[] polyYArray = Rock.sPolyYArray;
+
+    // Create a SpaceShip
+    SpaceShip theShip = new SpaceShip();
 
     // Gets the game board height and weight
 
@@ -115,7 +149,7 @@ class GameDrawingPanel extends JComponent {
 
     public GameDrawingPanel() {
 
-        for(int i = 0; i < 50; i++){
+        for(int i = 0; i < 10; i++){
 
             // Find a random x & y starting point
             // The -40 part is on there to keep the Rock on the screen
@@ -163,6 +197,10 @@ class GameDrawingPanel extends JComponent {
             graphicSettings.draw(rock);
 
         }
+
+        theShip.move();
+
+        graphicSettings.draw(theShip);
 
     }
 
