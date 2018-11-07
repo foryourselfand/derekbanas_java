@@ -27,7 +27,7 @@ public class SpaceShip extends Polygon{
 
     // Width and height of ship
 
-    private int shipWidth = 52, shipHeight = 60;
+    private int shipWidth = 54, shipHeight = 60;
 
     // Upper left hand corner of space ship
 
