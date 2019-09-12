@@ -1,62 +1,51 @@
 package L59;
 
-import java.awt.Polygon;
-import java.awt.Rectangle; // NEW
+import java.awt.*;
 import java.util.ArrayList;
 
 // Extending the Polygon class because I'm drawing Polygons
 
-class Rock extends Polygon{
+class Rock extends Polygon {
 
     // Upper left hand corner of the Polygon
 
-    int uLeftXPos, uLeftYPos;
+    public static int[] sPolyXArray = {10, 17, 26, 34, 27, 36, 26, 14, 8, 1, 5, 1, 10};
 
     // Used to change the direction of the asteroid when
     // it hits something and determines how fast it moves
-
-    int xDirection = 1;
-    int yDirection = 1;
+    public static int[] sPolyYArray = {0, 5, 1, 8, 13, 20, 31, 28, 31, 22, 16, 7, 0};
+    static ArrayList<Rock> rocks = new ArrayList<Rock>();
 
     // Define rock height and width
-
-    int rockWidth = 26;
-    int rockHeight = 31;
+    int uLeftXPos, uLeftYPos;
+    int xDirection = 1;
 
     // Copy of the Rock ArrayList
     // Holds every Rock I create
-
-    static ArrayList<Rock> rocks = new ArrayList<Rock>();
+    int yDirection = 1;
 
     // For JApplet
     // int width = ExampleBoard.WIDTH;
     // int height = ExampleBoard.HEIGHT;
 
     // Get the board width and height
-
-    int width = GameBoard.boardWidth;
-    int height = GameBoard.boardHeight;
+    int rockWidth = 26;
+    int rockHeight = 31;
 
     // Will hold the x & y coordinates for the Polygons
-
-    int[] polyXArray, polyYArray;
+    int width = GameBoard.boardWidth;
 
     // x & y positions available for other methods
     // There will be more Polygon points available later
-
-    public static int[] sPolyXArray = {10,17,26,34,27,36,26,14,8,1,5,1,10};
-    public static int[] sPolyYArray = {0,5,1,8,13,20,31,28,31,22,16,7,0};
+    int height = GameBoard.boardHeight;
+    int[] polyXArray, polyYArray;
 
     // Creates a new asteroid
 
-    public Rock(int[] polyXArray, int[] polyYArray, int pointsInPoly, int randomStartXPos, int randomStartYPos){
-
+    public Rock(int[] polyXArray, int[] polyYArray, int pointsInPoly, int randomStartXPos, int randomStartYPos) {
         // Creates a Polygon by calling the super or parent class of Rock Polygon
-
         super(polyXArray, polyYArray, pointsInPoly);
-
         // Randomly generate a speed for the Polygon
-
         this.xDirection = (int) (Math.random() * 4 + 1);
 
         this.yDirection = (int) (Math.random() * 4 + 1);
@@ -71,13 +60,49 @@ class Rock extends Polygon{
 
     // NEW: Creates a bounding rectangle for collision checking
 
+    public static int[] getpolyXArray(int randomStartXPos) {
+
+        // Clones the array so that the original shape isn't changed for the asteroid
+
+        int[] tempPolyXArray = (int[]) sPolyXArray.clone();
+
+        for (int i = 0; i < tempPolyXArray.length; i++) {
+
+            tempPolyXArray[i] += randomStartXPos;
+
+        }
+
+        return tempPolyXArray;
+
+    }
+
+    public static int[] getpolyYArray(int randomStartYPos) {
+
+        // Clones the array so that the original shape isn't changed for the asteroid
+
+        int[] tempPolyYArray = (int[]) sPolyYArray.clone();
+
+        for (int i = 0; i < tempPolyYArray.length; i++) {
+
+            tempPolyYArray[i] += randomStartYPos;
+
+        }
+
+        return tempPolyYArray;
+
+    }
+
+    // public method available for creating Polygon x point arrays
+
     public Rectangle getBounds() {
 
         return new Rectangle(super.xpoints[0], super.ypoints[0], rockWidth, rockHeight);
 
     }
 
-    public void move(){
+    // public method available for creating Polygon y point arrays
+
+    public void move() {
 
         // This rectangle surrounds the rock I'll check against
         // all of the other rocks below
@@ -87,7 +112,7 @@ class Rock extends Polygon{
         // Cycle through all the other rocks and check if they
         // cross over the rectangle I created above
 
-        for(Rock rock : rocks){
+        for (Rock rock : rocks) {
 
             // Creates a bounding rectangle that is used temporarily
             // for each other rock on the board
@@ -97,7 +122,7 @@ class Rock extends Polygon{
             // Check to make sure I'm not comparing one rock to itself
             // Check if one rock crosses over another rock
 
-            if(rock != this && otherRock.intersects(rockToCheck)){
+            if (rock != this && otherRock.intersects(rockToCheck)) {
 
                 // Switch the direction the rocks are moving on impact
 
@@ -129,48 +154,12 @@ class Rock extends Polygon{
 
         // Change the values of the points for the Polygon
 
-        for (int i = 0; i < super.xpoints.length; i++){
+        for (int i = 0; i < super.xpoints.length; i++) {
 
             super.xpoints[i] += xDirection;
             super.ypoints[i] += yDirection;
 
         }
-
-    }
-
-    // public method available for creating Polygon x point arrays
-
-    public static int[] getpolyXArray(int randomStartXPos){
-
-        // Clones the array so that the original shape isn't changed for the asteroid
-
-        int[] tempPolyXArray = (int[])sPolyXArray.clone();
-
-        for (int i = 0; i < tempPolyXArray.length; i++){
-
-            tempPolyXArray[i] += randomStartXPos;
-
-        }
-
-        return tempPolyXArray;
-
-    }
-
-    // public method available for creating Polygon y point arrays
-
-    public static int[] getpolyYArray(int randomStartYPos){
-
-        // Clones the array so that the original shape isn't changed for the asteroid
-
-        int[] tempPolyYArray = (int[])sPolyYArray.clone();
-
-        for (int i = 0; i < tempPolyYArray.length; i++){
-
-            tempPolyYArray[i] += randomStartYPos;
-
-        }
-
-        return tempPolyYArray;
 
     }
 

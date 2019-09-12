@@ -217,7 +217,7 @@ class GameDrawingPanel2 extends JComponent {
 
     public GameDrawingPanel2() {
 
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 100; i++){
 
             // Find a random x & y starting point
             // The -40 part is on there to keep the Rock on the screen
